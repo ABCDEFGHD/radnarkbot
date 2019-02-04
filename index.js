@@ -28,16 +28,12 @@ bot.on('message', message => {
     if (message.content.startsWith(prefix + "roll")){
         var randum = getRandomInt(0, 100);
         if (randum < 5) {
-            message.channel.sendMessage(`Echec Critique **${randum2}**`);
-            console.log(randum2);
+            message.channel.sendMessage(`Echec Critique **${randum}**`);
         } else if (randum > 95) {
-            message.channel.sendMessage(`Réussite Critique **${randum2}**`);
-            console.log(randum2);
+            message.channel.sendMessage(`Réussite Critique **${randum}**`);
         } else {
-            message.channel.sendMessage(`Roll: **${randum2}**`);
-            console.log(randum2);
+            message.channel.sendMessage(`Roll: **${randum}**`);
         }
-        bot.channels.findAll('name', 'logs-pandabot').map(channel => channel.send("Commande : __roll__ par : **" + message.author.tag + "** Dans **" + message.guild.name + "** / **" + message.channel.name + "** avec comme nombre **" + randum + "**"));
     }
 });
 

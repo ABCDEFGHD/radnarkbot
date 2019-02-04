@@ -42,3 +42,16 @@ bot.on('message', message => {
 });
 
 bot.setInterval(randomWheather, 30000);
+
+function getRandomInt(min, max) {
+    min = Math.ceil(min);
+    max = Math.floor(max);
+    return Math.floor(Math.random() * (max - min)) + min;
+}
+
+function randomWheather() {
+    var date = new Date();
+    if(date.getHours() == 0 && date.getMinutes() == 0) {
+        bot.channels.get("540963427653255169").send(weathers[getRandomInt(0, 3)])
+    }
+}

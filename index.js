@@ -10,6 +10,7 @@ bot.on('ready', () => {
     bot.user.setPresence({ game: { name: `Garder le Monde`, type: 0}});
     bot.user.setStatus("dnd");
     console.log("Bot Prêt !");
+    console.log(Date.getDate());
 });
 
 bot.login(process.env.TOKEN);

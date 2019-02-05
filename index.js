@@ -37,7 +37,7 @@ bot.on('message', message => {
     }
 });
 
-bot.setInterval(randomWheather, 30000);
+bot.setInterval(randomWheather, 60000);
 
 function getRandomInt(min, max) {
     min = Math.ceil(min);
